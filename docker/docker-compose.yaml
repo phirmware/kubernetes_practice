@@ -1,0 +1,6 @@
+version: "2"
+services:
+  node:
+    image: 09036229746/k8practice
+    ports:
+      - "3000:3000"

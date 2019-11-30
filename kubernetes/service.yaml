@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  k8practiceservice
+spec:
+  selector:
+    app:  k8practiceapp
+  type:  LoadBalancer
+  ports:
+    - port: 30002
+      nodePort: 30002
+      targetPort: k8practiceport
+      protocol: TCP

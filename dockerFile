@@ -1,0 +1,16 @@
+FROM alpine:3.10
+
+COPY package.json /var/www/
+COPY package-lock.json /var/www/
+
+WORKDIR /var/www
+
+RUN apk add npm
+
+RUN npm install
+
+EXPOSE 3000
+
+COPY . /var/www/
+
+CMD ["npm", "start"]
